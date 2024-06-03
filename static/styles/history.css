@@ -1,0 +1,54 @@
+/* General Styles */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+    color: black; /* White text color */
+}
+
+/* Container */
+#historyContainer {
+    max-width: 800px; /* Set a maximum width for better readability */
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3); /* Larger shadow */
+    margin: 50px auto; /* Center the container */
+    text-align: center; /* Center-align text */
+}
+
+/* Heading Styles */
+h1 {
+    font-size: 28px; /* Larger font size */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 25px;
+}
+
+/* Table Styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2; /* Orange background for table headers */
+    color: #333; /* White text color */
+}
+
+/* Link Styles */
+a {
+    color: #ff5722; /* Orange text color */
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #ff6d42; /* Lighter orange on hover */
+}
