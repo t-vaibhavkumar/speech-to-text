@@ -4,13 +4,15 @@
     <meta charset="UTF-8">
     <title>Speech Recognition in Python</title>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/upload.css') }}" />
 </head>
 <body>
 <header>
     <div id="headerContainer">
-        <h1>Speech to Text Transcriber</h1>
-        <a href="{{ url_for('history') }}" class="history-link">View Upload History</a>
+        <a href="{{ url_for('index') }}" class="no-underline"><h1>Speech to Text Transcriber</h1></a>
+        <a href="{{ url_for('upload_page') }}" class="history-link">UPLOAD</a>
+        <a href="{{ url_for('rec_page') }}" class="history-link">RECORD</a>
+        <a href="{{ url_for('history') }}" class="history-link">View Uploaded History</a>
     </div>
 </header>
 <div id="container">
@@ -29,8 +31,7 @@
                 <span class="edge"></span>
                 <span class="front">Transcribe</span>
             </button>
-            <a href="{{ url_for('rec_page') }}">recording</a>
-
+            
         </form>
 
         {% if transcript != "" %}

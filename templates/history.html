@@ -7,6 +7,14 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='styles/history.css') }}" />
 </head>
 <body>
+    <header>
+        <div id="headerContainer">
+            <a href="{{ url_for('index') }}"><h1>Speech to Text Transcriber</h1></a>
+            <a href="{{ url_for('upload_page') }}" class="history-link">UPLOAD</a>
+            <a href="{{ url_for('rec_page') }}" class="history-link">RECORD</a>
+            <a href="{{ url_for('history') }}" class="history-link">View Uploaded History</a>
+        </div>
+    </header>
 <div id="historyContainer">
     <h1>Upload History</h1>
     <table border="1">
@@ -31,7 +39,7 @@
         {% endfor %}
     </table>
     <br>
-    <a href="{{ url_for('upload_page') }}">Back to Upload</a>
+    <a href="{{ url_for('index') }}">Back to Home</a>
 </div>
 
 </body>

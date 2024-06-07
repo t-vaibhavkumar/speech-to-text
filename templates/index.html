@@ -1,19 +1,42 @@
-!DOCTYPE
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Speech to Text</title>
+    <title>Speech Recognition in Python</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
 </head>
 <body>
-    <h1>Speech to Text</h1>
-    <a href="{{ url_for('history') }}" class="history-link">View Upload History</a>
-    <a href="{{ url_for('upload_page') }}" class="history-link">uploading</a>
-    <div id="transcription"></div>
+<header>
+    <div id="headerContainer">
+        <a href="{{ url_for('index') }}"><h1>Speech to Text Transcriber</h1></a>
+        <a href="{{ url_for('upload_page') }}" class="history-link">UPLOAD</a>
+        <a href="{{ url_for('rec_page') }}" >RECORD</a>
+        <a href="{{ url_for('history') }}" class="history-link">View Uploaded History</a>
+    </div>
+</header>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="{{ url_for('static', filename='script.js') }}"></script>
+<div id="descriptionContainer">
+    <h2>Speech to Text Transcriber</h2>
+
+    <div id="firstBox">
+        <p>Through this website, the user can transcribe any audio either by uploading an audio file or speaking directly through the microphone and getting the text transcript in real time.</p>
+        <p>The project is built in Python language. The application makes use of a Python library to convert the speech to text. It uses sqlite3 for the database for the purpose of storing the history. Flask for the back-end structure and HTML, CSS, Javascript for front-end structures.</p>
+    </div>
+    <div id="secondBox">
+        <p>It is made by the students of RV University 2nd semester students for the SEE of BAP by the team of:</p>
+        <ul>
+            <li>Kanu Prieya M: <a href="https://github.com/kanuprieya" target="_blank">https://github.com/kanuprieya</a></li>
+            <li>Sameer Kulkarni: <a href="https://github.com/Sameer-kulkarni-123" target="_blank">https://github.com/Sameer-kulkarni-123</a></li>
+            <li>Satyam Goyal: <a href="https://github.com/Satyam-Goyal-123" target="_blank">https://github.com/Satyam-Goyal-123</a></li>
+            <li>Vaibhav Kumar: <a href="https://github.com/t-vaibhavkumar" target="_blank">https://github.com/t-vaibhavkumar</a></li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
 
 </body>
 </html>

@@ -4,17 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Speech to Text</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/index.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles/record.css') }}" />
 </head>
 <body>
-    <h1>Speech to Text</h1>
-    <button id="startRecording">Start Recording</button>
-    <button id="stopRecording" disabled>Stop Recording</button>
-    <a href="{{ url_for('history') }}" class="history-link">View Upload History</a>
-    <a href="{{ url_for('upload_page') }}" class="history-link">uploading</a>
-    <div id="transcription"></div>
+    <header>
+        <div id="headerContainer">
+            <a href="{{ url_for('index') }}"><h1>Speech to Text Transcriber</h1></a>
+            <a href="{{ url_for('upload_page') }}" class="history-link">UPLOAD</a>
+            <a href="{{ url_for('rec_page') }}" class="history-link">RECORD</a>
+            <a href="{{ url_for('history') }}" class="history-link">View Uploaded History</a>
+        </div>
+    </header>
+    <div id="mainContainer">
+        <div id="speechContainer">
+            <h1>Speak to Record</h1>
+            <div id="buttonContainer">
+                <button id="startRecording">Start Recording</button>
+                <button id="stopRecording" disabled>Stop Recording</button>
+            </div>
+            <div id="transcription" class="error-message">
+            </div>
+            
+        </div>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="{{ url_for('static', filename='script.js') }}"></script>
-
 </body>
 </html>
